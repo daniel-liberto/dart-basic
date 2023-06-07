@@ -1,13 +1,10 @@
 void main() {
   User user = new User('Daniel', 27, '18 4002-8922');
-  print(user.hello('dude'));
-  print(
-      'My name is ${user.name} and my age is ${user.age.toString()} years old');
-  print('If you need my contact, my phone is ${user.phone}');
+  user.hello('dude');
 }
 
 class User {
-  // declaring variables
+  // declaring user info
   String name = '';
   int age = 0;
   String phone = '';
@@ -21,7 +18,10 @@ class User {
   }
 
   // just a function inside the class
-  hello(person) {
-    return 'Hello $person';
+  void hello(person) {
+    print('Hello $person');
+    print(
+        'My name is ${this.name} and my age is ${this.age.toString()} years old');
+    print('If you need my contact, my phone is ${this.phone}');
   }
 }
